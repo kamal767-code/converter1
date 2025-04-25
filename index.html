@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valyuta Kalkulyatoru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="logo-container">
+      <img src="/Asset 1@3x 1.svg" alt="Bank Logo">
+    </div>
+    <nav class="navigation">
+      <a href="#" class="nav-item">BANK</a>
+      <a href="#" class="nav-item">BIZNES</a>
+      <a href="#" class="nav-item">İNVESTİSİYALAR</a>
+      <a href="#" class="nav-item">SİĞORTA</a>
+      <a href="#" class="nav-item">MOBİL TƏTBİQ</a>
+      <a href="#" class="nav-item">SƏYAHƏT</a>
+    </nav>
+    <button class="login-btn">GİRİŞ</button>
+  </header>
+  <main class="app-main">
+    <h1 class="main-heading">Valyuta Kalkulyatoru</h1>
+    <div class="converter-container">
+      <div class="converter-panel">
+        <div class="panel-label">MƏNDƏ OLAN</div>
+        <div class="currency-selector">
+          <button class="currency-option selected" data-currency="RUB">RUB</button>
+          <button class="currency-option" data-currency="USD">USD</button>
+          <button class="currency-option" data-currency="EUR">EUR</button>
+          <button class="currency-option" data-currency="GBP">GBP</button>
+        </div>
+        <div class="amount-wrapper">
+          <input type="text" class="amount-input from-amount" placeholder="0.00000" />
+          <div class="exchange-rate from-rate"></div>
+        </div>
+      </div>
+      <div class="converter-panel">
+        <div class="panel-label">ƏLDƏ ETMƏK İSTƏDİYİM</div>
+        <div class="currency-selector">
+          <button class="currency-option" data-currency="RUB">RUB</button>
+          <button class="currency-option selected" data-currency="USD">USD</button>
+          <button class="currency-option" data-currency="EUR">EUR</button>
+          <button class="currency-option" data-currency="GBP">GBP</button>
+        </div>
+        <div class="amount-wrapper">
+          <input type="text" class="amount-input to-amount" placeholder="0.00000"/>
+          <div class="exchange-rate to-rate"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="/app.js"></script>
+</html>

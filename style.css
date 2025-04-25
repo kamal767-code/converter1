@@ -1,0 +1,222 @@
+:root {
+    --main-color: #7b2cbf;
+    --secondary-color: #9d4edd;
+    --light-text: #6c757d;
+    --border-color: #dee2e6;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--white);
+    color: #212529;
+    line-height: 1.5;
+  }
+
+  .app-header {
+    background: var(--light-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .logo-container img {
+    height: 26px;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: var(--light-text);
+    margin: 0 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .nav-item:hover {
+    color: var(--main-color);
+  }
+
+  .login-btn {
+    width: 70px;
+    height: 34px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .login-btn:hover {
+    background: var(--main-color);
+    color: var(--white);
+    border-color: var(--main-color);
+  }
+
+  .app-main {
+    padding: 30px 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main-heading {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--main-color);
+  }
+
+  .converter-container {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .converter-panel {
+    width: 260px;
+  }
+
+  .panel-label {
+    text-align: left;
+    font-size: 14px;
+    color: var(--light-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .currency-selector {
+    display: flex;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .currency-option {
+    flex: 1;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: var(--white);
+    color: #adb5bd;
+    font-size: 14px;
+    font-weight: 700;
+    border-right: 1px solid var(--border-color);
+    transition: all 0.2s;
+  }
+
+  .currency-option:last-child {
+    border-right: none;
+  }
+
+  .currency-option.selected {
+    background-color: var(--main-color);
+    color: var(--white);
+  }
+
+  .amount-wrapper {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 12px;
+    background-color: var(--white);
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  .amount-input {
+    border: none;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    background: transparent;
+    outline: none;
+    letter-spacing: 0.5px;
+    color: #343a40;
+  }
+
+  .exchange-rate {
+    font-size: 14px;
+    color: #adb5bd;
+    margin-top: 15px;
+    margin-left: 2px;
+  }
+
+  .amount-input::placeholder {
+    color: #ced4da;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .amount-input:focus::placeholder {
+    color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    .app-header {
+      padding: 10px 15px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .navigation {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 6px;
+    }
+
+    .nav-item {
+      font-size: 12px;
+      margin: 0 4px;
+    }
+
+    .converter-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .main-heading {
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
+
+    .converter-panel {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .currency-option {
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .amount-input {
+      font-size: 24px;
+    }
+
+    .exchange-rate {
+      font-size: 13px;
+    }
+  }
